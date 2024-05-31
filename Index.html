@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMAR-HANDICAP</title>
+    <style>
+        body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0; /* Fond gris clair pour réduire la fatigue oculaire */
+    color: #333333; /* Texte sombre pour un bon contraste */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #0056b3; /* Bleu sombre pour un bon contraste avec le texte blanc */
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav {
+    background-color: #007BFF;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+nav ul li a:focus, nav ul li a:hover {
+    outline: 3px solid #f0f0f0; /* Indicateur de focus */
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+
+section {
+    margin-top: 20px;
+}
+
+section h2 {
+    font-size: 2em;
+    color: #0056b3;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+input:focus, textarea:focus, button:focus {
+    outline: 3px solid #007BFF; /* Indicateur de focus */
+}
+
+button {
+    background-color: #007BFF;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3; /* Couleur de survol */
+}
+
+button:focus {
+    outline: 3px solid #0056b3; /* Indicateur de focus */
+}
+
+footer {
+    background-color: #0056b3;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Styles pour le message de confirmation */
+#donation-feedback {
+    display: none;
+    margin-top: 20px;
+    padding: 15px;
+    border: 2px solid #4CAF50; /* Bordure verte pour indiquer le succès */
+    background-color: #dff0d8; /* Fond vert clair pour indiquer le succès */
+    color: #3c763d; /* Texte vert foncé pour indiquer le succès */
+    font-size: 1.2em; /* Taille de police légèrement augmentée pour la visibilité */
+    border-radius: 4px; /* Coins arrondis pour un aspect esthétique */
+    text-align: center; /* Centrer le texte */
+}
+
+                           
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bienvenue le site de AMAR-HANDICAP  </h1>
+        <nav aria-label="Menu principal">
+            <ul>
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#donate">Faire un don</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main id="home">
+        <section aria-labelledby="intro-heading">
+            <h2 id="intro-heading">Introduction</h2>
+            <p>Ce site est conçu pour être entièrement accessible aux personnes aveugles.</p>
+        </section>
+        
+        <section id="about" aria-labelledby="about-heading">
+            <h2 id="about-heading">À propos</h2>
+            <p>Nous nous engageons à fournir un contenu accessible et inclusif pour tous les utilisateurs.</p>
+        </section>
+        
+        <section id="services" aria-labelledby="services-heading">
+            <h2 id="services-heading">Services</h2>
+            <ul>
+                <li>Consultation en accessibilité</li>
+                <li>Développement web accessible</li>
+                <li>Formation et sensibilisation</li>
+            </ul>
+        </section>
+
+        
+        
+        <section id="contact" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact</h2>
+            <form>
+                <div>
+                    <label for="name">Nom :</label>
+                    <input type="text" id="name" name="name" aria-required="true">
+                </div>
+                <div>
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" aria-required="true">
+                </div>
+                <div>
+                    <label for="message">Message :</label>
+                    <textarea id="message" name="message" aria-required="true"></textarea>
+                </div>
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+
+        <section id="donate" aria-labelledby="donate-heading">
+            <h2 id="donate-heading">Faire un don</h2>
+            <form id="donation-form">
+                <div>
+                    <label for="donation-amount">Montant du don :</label>
+                    <input type="number" id="donation-amount" name="donation-amount" aria-required="true" min="1" step="any">
+                </div>
+                <div>
+                    <label for="donor-name">Nom :</label>
+                    <input type="text" id="donor-name" name="donor-name" aria-required="true">
+                </div>
+                <div>
+                    <label for="donor-email">Email :</label>
+                    <input type="email" id="donor-email" name="donor-email" aria-required="true">
+                </div>
+                <div>
+                    <label for="donor-message">Message (optionnel) :</label>
+                    <textarea id="donor-message" name="donor-message"></textarea>
+                </div>
+                <button type="submit">Faire un don</button>
+            </form>
+            <div id="donation-feedback" aria-live="polite"></div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Site Accessible. Tous droits réservés.</p>
+    </footer>
+    <script>
+        document.getElementById('donation-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Afficher immédiatement le message de feedback
+            const feedbackElement = document.getElementById('donation-feedback');
+            feedbackElement.innerText = 'Merci pour votre don ! Votre soutien est précieux.';
+            feedbackElement.style.display = 'block';
+            
+            // Simuler le traitement du don
+            setTimeout(function() {
+                // Réinitialiser le formulaire
+                document.getElementById('donation-form').reset();
+                
+                // Optionnel : masquer le message de feedback après un certain temps
+                setTimeout(function() {
+                    feedbackElement.style.display = 'none';
+                    feedbackElement.innerText = ''; // Optionnel : nettoyer le message
+                }, 5000); // Masquer après 5 secondes
+            }, 500); // Simuler un délai de traitement
+        });
+    </script>
+</body>
+
+</html>
