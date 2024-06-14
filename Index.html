@@ -6,147 +6,244 @@
     <title>AMAR-HANDICAP</title>
     <style>
         body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f0f0f0; /* Fond gris clair pour réduire la fatigue oculaire */
-    color: #333333; /* Texte sombre pour un bon contraste */
-    margin: 0;
-    padding: 0;
-}
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #001f3f; /* Bleu contrasté pour le fond */
+            color: #000000; /* Couleur de texte de base */
+            margin: 0;
+            padding: 0;
+        }
 
-header {
-    background-color: #0056b3; /* Bleu sombre pour un bon contraste avec le texte blanc */
-    color: #ffffff;
-    padding: 20px;
-    text-align: center;
-}
+        header {
+            background-color: #0056b3; /* Bleu foncé */
+            color: #ffffff; /* Texte blanc pour contraste */
+            padding: 20px;
+            text-align: center;
+        }
 
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
-}
+        header h1 {
+            margin: 0;
+            font-size: 4em;
+        }
 
-nav {
-    background-color: #007BFF;
-    padding: 10px 0;
-}
+        nav {
+            background-color: #007BFF; /* Bleu */
+            padding: 20px 0; /* Augmenté pour plus d'espace */
+        }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-}
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
+        nav ul li {
+            display: inline;
+            margin: 0 30px; /* Augmenté pour plus d'espace */
+        }
 
-nav ul li a {
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: bold;
-}
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff; /* Texte blanc */
+            font-weight: bold;
+            font-size: 2em; /* Augmenté pour une meilleure lisibilité */
+        }
 
-nav ul li a:focus, nav ul li a:hover {
-    outline: 3px solid #f0f0f0; /* Indicateur de focus */
-}
+        nav ul li a:focus, nav ul li a:hover {
+            outline: 3px solid #f0f0f0; /* Indicateur de focus */
+        }
 
-main {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: #ffffff;
-}
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #ffffff; /* Fond blanc pour le contenu principal */
+        }
 
-section {
-    margin-top: 20px;
-}
+        section {
+            margin-top: 20px;
+        }
 
-section h2 {
-    font-size: 2em;
-    color: #0056b3;
-}
+        section h2 {
+            font-size: 2em;
+            color: #0056b3; /* Bleu foncé pour les titres */
+        }
 
-form div {
-    margin-bottom: 15px;
-}
+        form div {
+            margin-bottom: 15px;
+        }
 
-label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
 
-input, textarea, button {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #cccccc;
-    border-radius: 4px;
-    font-size: 1em;
-}
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            font-size: 1em;
+        }
 
-input:focus, textarea:focus, button:focus {
-    outline: 3px solid #007BFF; /* Indicateur de focus */
-}
+        input:focus, textarea:focus, button:focus {
+            outline: 3px solid #007BFF; /* Indicateur de focus */
+        }
 
-button {
-    background-color: #007BFF;
-    color: #ffffff;
-    border: none;
-    cursor: pointer;
-}
+        button {
+            background-color: #007BFF;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+        }
 
-button:hover {
-    background-color: #0056b3; /* Couleur de survol */
-}
+        button:hover {
+            background-color: #0056b3; /* Couleur de survol */
+        }
 
-button:focus {
-    outline: 3px solid #0056b3; /* Indicateur de focus */
-}
+        button:focus {
+            outline: 3px solid #0056b3; /* Indicateur de focus */
+        }
 
-footer {
-    background-color: #0056b3;
-    color: #ffffff;
-    text-align: center;
-    padding: 20px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
+        footer {
+            background-color: #0056b3;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
 
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-}
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
 
-/* Styles pour le message de confirmation */
-#donation-feedback {
-    display: none;
-    margin-top: 20px;
-    padding: 15px;
-    border: 2px solid #4CAF50; /* Bordure verte pour indiquer le succès */
-    background-color: #dff0d8; /* Fond vert clair pour indiquer le succès */
-    color: #3c763d; /* Texte vert foncé pour indiquer le succès */
-    font-size: 1.2em; /* Taille de police légèrement augmentée pour la visibilité */
-    border-radius: 4px; /* Coins arrondis pour un aspect esthétique */
-    text-align: center; /* Centrer le texte */
-}
+        /* Styles pour le message de confirmation */
+        #donation-feedback {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            border: 2px solid #4CAF50; /* Bordure verte pour indiquer le succès */
+            background-color: #dff0d8; /* Fond vert clair pour indiquer le succès */
+            color: #3c763d; /* Texte vert foncé pour indiquer le succès */
+            font-size: 1.2em; /* Taille de police légèrement augmentée pour la visibilité */
+            border-radius: 4px; /* Coins arrondis pour un aspect esthétique */
+            text-align: center; /* Centrer le texte */
+        }
 
-                           
+        /* General styles */
+        #about {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem 2rem;
+            background-color: #f9f9f9; /* Fond gris très clair */
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Heading styles */
+        #about-heading {
+            font-size: 2rem;
+            color: #0056b3; /* Bleu foncé */
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        /* Paragraph styles */
+        #about p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        /* Highlighted question styles */
+        .highlight {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #0056b3; /* Bleu foncé */
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            #about {
+                padding: 1rem;
+            }
+
+            #about-heading {
+                font-size: 1.5rem;
+            }
+
+            #why-create {
+                font-size: 1.5rem;
+            }
+
+            #about p {
+                font-size: 0.9rem;
+            }
+
+            .highlight {
+                font-size: 1rem;
+            }
+        }
+
+        /* General styles */
+        section {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem 2rem;
+            background-color: #f9f9f9; /* Fond gris très clair */
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        /* Heading styles */
+        h2 {
+            font-size: 2rem;
+            color: #0056b3; /* Bleu foncé */
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        /* Paragraph styles */
+        section p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            section {
+                padding: 1rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            section p {
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Bienvenue le site de AMAR-HANDICAP  </h1>
+        <h1>Bienvenue sur le site de AMAR-HANDICAP</h1>
         <nav aria-label="Menu principal">
             <ul>
                 <li><a href="#home">Accueil</a></li>
@@ -157,18 +254,42 @@ footer {
             </ul>
         </nav>
     </header>
-    
+   
     <main id="home">
         <section aria-labelledby="intro-heading">
             <h2 id="intro-heading">Introduction</h2>
-            <p>Ce site est conçu pour être entièrement accessible aux personnes aveugles.</p>
+            <h2 id="purpose-heading">Notre raison d'être</h2>
+            <p>
+                L'association a pour but de sensibiliser et de faciliter la mobilité, l'accessibilité et la réhabilitation pour les personnes en situation de handicap.
+            </p>
+            <p>
+                Elle aspire à améliorer leur qualité de vie en leur permettant d'accéder à des équipements adaptés.
+            </p>
+            <p>
+                L'objectif de A.M.A.R. est de créer un environnement inclusif où chaque personne a la possibilité de vivre et de s'épanouir pleinement dans la société.
+            </p>
         </section>
         
         <section id="about" aria-labelledby="about-heading">
             <h2 id="about-heading">À propos</h2>
-            <p>Nous nous engageons à fournir un contenu accessible et inclusif pour tous les utilisateurs.</p>
+            <h3 id="why-create">Pourquoi créer A.M.A.R ?</h3>
+            <p>
+                Shireen et Lorena, nous sommes deux cousines, qui avons pour motivation profonde d’apporter une aide à notre pays El Salvador et laisser une empreinte.
+                Nous souhaitons donner la possibilité à d’autres personnes d’adhérer à notre projet afin de le faire perdurer pour les générations futures.
+            </p>
+            <p class="highlight">
+                Mais par où commencer ?<br>
+                Que pouvons-nous apporter ?
+            </p>
+            <p>
+                Finalement c’est l’histoire d’Adrien qui nous a amenées à notre projet.
+                Adrien est né au Salvador en 2016 avec le syndrome Arnold Chiari type 2. Il a été hospitalisé pendant 6 mois à l’hôpital Benjamin Bloom, le seul hôpital pédiatrique public au Salvador.
+                Pour ses 14 mois, toute la famille emménage en France et Adrien a bénéficié des meilleurs soins et suivi, grâce aux différentes structures du pays.
+                Dans ce quotidien et au contact avec les équipes soignantes et les autres parents, Shireen, sa maman, a vu le moyen de pouvoir aider les personnes au Salvador.
+                Un jour de discussion et de rêverie à propos de nos envies de faire le lien entre la France et El Salvador, Shireen partage avec Lorena son idée... et c’est là que le projet A.MA.R voit le jour.
+            </p>
         </section>
-        
+
         <section id="services" aria-labelledby="services-heading">
             <h2 id="services-heading">Services</h2>
             <ul>
@@ -178,8 +299,6 @@ footer {
             </ul>
         </section>
 
-        
-        
         <section id="contact" aria-labelledby="contact-heading">
             <h2 id="contact-heading">Contact</h2>
             <form>
@@ -250,5 +369,4 @@ footer {
         });
     </script>
 </body>
-
 </html>
